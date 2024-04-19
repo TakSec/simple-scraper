@@ -1,8 +1,9 @@
+# Simple Scraper 🤖🌐
 
-# SimpleScraper
+SimpleScraper is an open-source tool designed to fetch and transform website content based on URLs provided via an API.  Can be used to give LLMs access to live browsing capabilities.
 
-## Description
-SimpleScraper is an open-source tool designed to fetch and transform website content based on URLs provided via an API.
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/TakSec.svg?style=social&label=Follow%20%40TakSec)](https://twitter.com/TakSec)
+</p>
 
 ## Requirements
 - Node.js
