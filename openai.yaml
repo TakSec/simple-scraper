@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Simple Scraper API
+  description: API to fetch content from a given URL using a POST request.
+  version: 1.0.0
+servers:
+  - url: https://simplescraper.net
+    description: Production server
+paths:
+  /1SmzbIpG9K5T4:
+    post:
+      operationId: fetchContent
+      summary: Fetches content from a specified URL
+      x-openai-isConsequential: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: "The URL to fetch content from"
+                  example: "https://example.com"
+      responses:
+        '200':
+          description: The content of the fetched URL, returned as is from the source.
+          content:
+            application/json:
+              schema:
+                type: string
+                description: "Response from the fetched URL."
+        '400':
+          description: Bad request, indicating the URL is missing from the request body.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "URL is required"
+        '500':
+          description: Server error, indicating failure to fetch the URL.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Failed to fetch the URL"
