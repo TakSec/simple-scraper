@@ -4,10 +4,10 @@ info:
   description: API to fetch content from a given URL using a POST request.
   version: 1.0.0
 servers:
-  - url: https://simplescraper.net
+  - url: https://example.com
     description: Production server
 paths:
-  /1SmzbIpG9K5T4:
+  /api/fetch-content:
     post:
       operationId: fetchContent
       summary: Fetches content from a specified URL
